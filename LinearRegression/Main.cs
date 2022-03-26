@@ -4,7 +4,7 @@ using LinearRegression;
 
 /* Declaring Required Variables */
 List<DataSet.LinearRegression> dataset = new List<DataSet.LinearRegression>();
-MLContext mlContext = new MLContext(seed: 0); // Seed for Random Number Generator
+MLContext mlContext = new MLContext(seed: 7985); // Seed for Random Number Generator
 Methods.data _data = new Methods.data();
 Methods.LR _lr = new Methods.LR();
 
@@ -45,7 +45,7 @@ mlContext.Model.Save(model, dataView.Schema, Path.Combine(Environment.CurrentDir
 // Predict One Sample
 _lr.TestSinglePrediction(mlContext,
                          Path.Combine(Environment.CurrentDirectory, "LinearRegressionModel", "Model.zip"),
-                         new string[] { "b279738fb9a444e49c69173a9379c137", "Friday - October", "0" });
+                         new string[] { "b279738fb9a444e49c69173a9379c137", "Friday - March", "21" });
 
 // Data Visualization display the relation between Actual and desired results
 _data.display_visitsPerTime(mlContext, split, Path.Combine(Environment.CurrentDirectory, "LinearRegressionModel", "Model.zip"));
