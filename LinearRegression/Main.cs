@@ -23,7 +23,7 @@ IDataView dataView = mlContext.Data.LoadFromEnumerable<DataSet.LinearRegression>
 var split = mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
 
 // Data Visualization represent visits in Times
-_data.display<Single, float>(split, "Rate Of Visisors/Time", "time", "visits_num", "markers");
+_data.display<Single, float>(split, "Rate Of Visitors/Time", "time", "visits_num", "markers");
 
 // Data Visualization represent visits on dates
 //_data.display<string, float>(split, "Rate Of Visitors/Date", "date", "visits_num", "markers");

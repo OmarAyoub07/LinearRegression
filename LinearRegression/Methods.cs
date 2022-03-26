@@ -106,10 +106,10 @@ namespace LinearRegression
 
                 // Settingup and Display
                 var chart = Chart.Plot(new[] { actual_hv, predicted_hv });
-                var layout = new Layout.Layout() { title = "Visistr/Time" };
+                var layout = new Layout.Layout() { title = "Visits Rate/Time" };
                 chart.WithLayout(layout);
                 chart.WithXTitle("Hours");
-                chart.WithYTitle("Visists");
+                chart.WithYTitle("Visits");
                 chart.Show();
             }
         }
